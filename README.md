@@ -34,8 +34,7 @@ python3 --version
 pip3 --version
 
 # install dependencies
-pip3 install flask
-pip3 install flask-mysqldb
+pip install -r requirements.txt
 ```
 
 ```bash
