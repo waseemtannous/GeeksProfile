@@ -59,7 +59,7 @@ sudo mysql_secure_installation
 sudo mysql -u root -p
 
 # run sql file to create database and table
-source /home/ubuntu/GeeksProfile/table.sql
+source /home/ubuntu/GeeksProfile/db/init.sql
 
 # check if database created correctly
 SHOW DATABASES; # should show geekprofile database
@@ -75,3 +75,21 @@ python3 app.py
 Now, acces the app by going to http://"INSTANCE IP":8080/
 
 You can register with a new user and login to the system.
+
+## 2 - Dockerize the app
+
+Started by creating dockerfile containing all the dependencies and the app and a docker compose file to run the app with mysql database.
+
+To run the app, run the following commands:
+
+```bash
+git clone https://github.com/waseemtannous/GeeksProfile.git
+cd GeeksProfile
+docker-compose up --build -d
+```
+
+To stop the app, run the following command:
+
+```bash
+docker-compose down
+```
