@@ -5,7 +5,7 @@ pipeline {
   stages {
     stage('Build Image') {
       steps {
-        sh 'docker build -t geeks-profile .'
+        sh 'docker build -t geeks-profile . -f app.dockerfile'
       }
     }
 
