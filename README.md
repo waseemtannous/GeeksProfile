@@ -13,7 +13,7 @@ The main objective is to:
 
 Started by creating an EC2 instance in AWS running Ubuntu and opening port 8080 as the app will listen to this port.
 
-Now, install python dependencies and MySQL.
+Clone app:
 
 ```bash
 sudo apt-get update
@@ -23,7 +23,11 @@ sudo apt install git -y
 
 # clone code
 git clone https://github.com/waseemtannous/GeeksProfile.git
+```
 
+Install python dependencies:
+
+```bash
 # install python3 and pip3
 sudo apt install python3 python3-pip -y
 sudo apt install libpython3.10
@@ -36,6 +40,8 @@ pip3 --version
 # install dependencies
 pip install -r requirements.txt
 ```
+
+Install MySQL:
 
 ```bash
 # install mysql
@@ -54,8 +60,12 @@ exit
 
 # check if password is set correctly. Don't change password and apply using y to all questions.
 sudo mysql_secure_installation
+```
 
-# now login to mysql CLI
+Now init the database:
+
+```bash
+# login to mysql CLI
 sudo mysql -u root -p
 
 # run sql file to create database and table
@@ -66,8 +76,11 @@ SHOW DATABASES; # should show geekprofile database
 
 # exit mysql CLI
 exit
+```
 
-# now run the app
+Finally, run the app:
+
+```bash
 cd GeeksProfile
 python3 app.py
 ```
