@@ -133,6 +133,16 @@ Slack message:
 
 ## 4 - Run the app with Kubernetes over Minikube.
 
+Created a deployment and service for the server and the mysql database.
+
+Created a config map containing environment variables for the app.
+
+Created a config map used to init the mysql database and table.
+
+Also, created a PVC for the mysql database to save the data.
+
+Finally, created an ingress to access the server from outside the cluster.
+
 ```bash
 # clone project
 git clone https://github.com/waseemtannous/GeeksProfile.git
