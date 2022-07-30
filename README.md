@@ -109,7 +109,7 @@ docker-compose down
 
 ## 3 - Create a Jenkins pipeline to build and push the docker images to Docker Hub
 
-Start by creating a new EC2 instance in AWS running Ubuntu and installing Jenkins.
+Start by creating a new EC2 instance in AWS running Ubuntu and installing Jenkins and Docker.
 
 Create a new pipeline job with GitHub hook for triggering the pipeline.
 
@@ -118,3 +118,15 @@ Create a token from docker hub in order to push the images to docker hub. Create
 Create a Jenkinsfile which builds the docker image and pushes it to docker hub.
 
 finally, the pipeline sends a build status to slack. Set slack secret key in order to send the message.
+
+Jenkins pipeline build status:
+
+![jenkinsBuildStatus](images/jenkinsBuildStatus.png)
+
+Dockerhub image:
+
+![dockerHub](images/dockerHub.png)
+
+Slack message:
+
+![slackMessage](images/slackMessage.png)
