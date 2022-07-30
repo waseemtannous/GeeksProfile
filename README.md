@@ -130,3 +130,27 @@ Dockerhub image:
 Slack message:
 
 ![slackMessage](images/slackMessage.png)
+
+## 4 - Run the app with Kubernetes over Minikube.
+
+```bash
+# clone project
+git clone https://github.com/waseemtannous/GeeksProfile.git
+cd GeeksProfile/k8s
+
+# start minikube
+minikube start
+
+# enable ingress
+minikube addons enable ingress
+
+kubectl apply -f envVars.yaml
+kubectl apply -f mysqlInitConfig.yaml
+kubectl apply -f pvc.yaml
+kubectl apply -f deployment.yaml
+
+# only in windows
+minikube tunnel
+```
+
+Access the app by going to http://localhost/
