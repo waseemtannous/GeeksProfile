@@ -11,9 +11,9 @@ app = Flask(__name__)
 app.secret_key = 'your secret key'
 
 
-app.config['MYSQL_HOST'] = environ['MYSQL_HOST']
-app.config['MYSQL_USER'] = environ['MYSQL_USER']
-app.config['MYSQL_PASSWORD'] = environ['MYSQL_PASSWORD']
+app.config['MYSQL_HOST'] = environ.get('MYSQL_HOST', 'localhost')
+app.config['MYSQL_USER'] = environ.get('MYSQL_USER', 'root')
+app.config['MYSQL_PASSWORD'] = environ.get('MYSQL_PASSWORD', 'password')
 app.config['MYSQL_DB'] = 'geekprofile'
 
 
